@@ -32,14 +32,14 @@ userSchema.pre("save", async function (next) {
 });
 
 //Associates the rating schema to the user
-userSchema.add({
-  ratings: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Rating",
-    },
-  ],
-});
+// userSchema.add({
+//   ratings: [
+//     {
+//       type: mongoose.Schema.Types.ObjectId,
+//       ref: "Rating",
+//     },
+//   ],
+// });
 
 //checks to see if a given plain text password matches the hashed password.
 userSchema.methods.isCorrectPassword = async function (password) {
